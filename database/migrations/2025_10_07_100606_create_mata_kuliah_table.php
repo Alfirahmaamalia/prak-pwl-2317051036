@@ -12,8 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('mata_kuliah', function (Blueprint $table) {
-            $table->id();
-            $table->string('nama');
+            $table->uuid()->primary();
+            $table->string('nama',100);
             $table->string('sks');
             $table->timestamps();
         });
