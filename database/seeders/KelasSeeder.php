@@ -13,6 +13,7 @@ class KelasSeeder extends Seeder
      */
     public function run(): void
     {
+<<<<<<< HEAD
         $data =[
             'A',
             'B',
@@ -27,3 +28,19 @@ class KelasSeeder extends Seeder
         }
     }
 }
+=======
+        $data = [
+            'A',
+            'B',
+            'C',
+            'D'
+        ];
+
+        foreach ($data as $kelas) {
+            Kelas::create([
+                'nama_kelas' => $kelas
+            ]);
+        }
+    }
+}
+>>>>>>> origin/update-delete

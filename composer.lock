@@ -1055,6 +1055,7 @@
         },
         {
             "name": "laravel/framework",
+<<<<<<< HEAD
             "version": "v10.49.0",
             "source": {
                 "type": "git",
@@ -1065,6 +1066,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/laravel/framework/zipball/b6848517f93445e7f243aaa4f3c32cc70f6739e2",
                 "reference": "b6848517f93445e7f243aaa4f3c32cc70f6739e2",
+=======
+            "version": "v10.48.29",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/framework.git",
+                "reference": "8f7f9247cb8aad1a769d6b9815a6623d89b46b47"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/8f7f9247cb8aad1a769d6b9815a6623d89b46b47",
+                "reference": "8f7f9247cb8aad1a769d6b9815a6623d89b46b47",
+>>>>>>> origin/update-delete
                 "shasum": ""
             },
             "require": {
@@ -1223,7 +1236,10 @@
             },
             "autoload": {
                 "files": [
+<<<<<<< HEAD
                     "src/Illuminate/Collections/functions.php",
+=======
+>>>>>>> origin/update-delete
                     "src/Illuminate/Collections/helpers.php",
                     "src/Illuminate/Events/functions.php",
                     "src/Illuminate/Filesystem/functions.php",
@@ -1259,7 +1275,11 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
+<<<<<<< HEAD
             "time": "2025-09-08T22:02:05+00:00"
+=======
+            "time": "2025-03-12T14:42:01+00:00"
+>>>>>>> origin/update-delete
         },
         {
             "name": "laravel/prompts",
@@ -3080,6 +3100,7 @@
         },
         {
             "name": "ramsey/uuid",
+<<<<<<< HEAD
             "version": "4.9.1",
             "source": {
                 "type": "git",
@@ -3094,6 +3115,22 @@
             },
             "require": {
                 "brick/math": "^0.8.8 || ^0.9 || ^0.10 || ^0.11 || ^0.12 || ^0.13 || ^0.14",
+=======
+            "version": "4.9.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ramsey/uuid.git",
+                "reference": "4e0e23cc785f0724a0e838279a9eb03f28b092a0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ramsey/uuid/zipball/4e0e23cc785f0724a0e838279a9eb03f28b092a0",
+                "reference": "4e0e23cc785f0724a0e838279a9eb03f28b092a0",
+                "shasum": ""
+            },
+            "require": {
+                "brick/math": "^0.8.8 || ^0.9 || ^0.10 || ^0.11 || ^0.12 || ^0.13",
+>>>>>>> origin/update-delete
                 "php": "^8.0",
                 "ramsey/collection": "^1.2 || ^2.0"
             },
@@ -3152,9 +3189,15 @@
             ],
             "support": {
                 "issues": "https://github.com/ramsey/uuid/issues",
+<<<<<<< HEAD
                 "source": "https://github.com/ramsey/uuid/tree/4.9.1"
             },
             "time": "2025-09-04T20:59:21+00:00"
+=======
+                "source": "https://github.com/ramsey/uuid/tree/4.9.0"
+            },
+            "time": "2025-06-25T14:20:11+00:00"
+>>>>>>> origin/update-delete
         },
         {
             "name": "symfony/console",
@@ -5863,6 +5906,7 @@
         },
         {
             "name": "laravel/pint",
+<<<<<<< HEAD
             "version": "v1.25.1",
             "source": {
                 "type": "git",
@@ -5873,6 +5917,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/laravel/pint/zipball/5016e263f95d97670d71b9a987bd8996ade6d8d9",
                 "reference": "5016e263f95d97670d71b9a987bd8996ade6d8d9",
+=======
+            "version": "v1.24.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/pint.git",
+                "reference": "0345f3b05f136801af8c339f9d16ef29e6b4df8a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/pint/zipball/0345f3b05f136801af8c339f9d16ef29e6b4df8a",
+                "reference": "0345f3b05f136801af8c339f9d16ef29e6b4df8a",
+>>>>>>> origin/update-delete
                 "shasum": ""
             },
             "require": {
@@ -5883,9 +5939,15 @@
                 "php": "^8.2.0"
             },
             "require-dev": {
+<<<<<<< HEAD
                 "friendsofphp/php-cs-fixer": "^3.87.2",
                 "illuminate/view": "^11.46.0",
                 "larastan/larastan": "^3.7.1",
+=======
+                "friendsofphp/php-cs-fixer": "^3.82.2",
+                "illuminate/view": "^11.45.1",
+                "larastan/larastan": "^3.5.0",
+>>>>>>> origin/update-delete
                 "laravel-zero/framework": "^11.45.0",
                 "mockery/mockery": "^1.6.12",
                 "nunomaduro/termwind": "^2.3.1",
@@ -5896,6 +5958,12 @@
             ],
             "type": "project",
             "autoload": {
+<<<<<<< HEAD
+=======
+                "files": [
+                    "overrides/Runner/Parallel/ProcessFactory.php"
+                ],
+>>>>>>> origin/update-delete
                 "psr-4": {
                     "App\\": "app/",
                     "Database\\Seeders\\": "database/seeders/",
@@ -5925,7 +5993,11 @@
                 "issues": "https://github.com/laravel/pint/issues",
                 "source": "https://github.com/laravel/pint"
             },
+<<<<<<< HEAD
             "time": "2025-09-19T02:57:12+00:00"
+=======
+            "time": "2025-07-10T18:09:32+00:00"
+>>>>>>> origin/update-delete
         },
         {
             "name": "laravel/sail",
@@ -6670,6 +6742,7 @@
         },
         {
             "name": "phpunit/phpunit",
+<<<<<<< HEAD
             "version": "10.5.55",
             "source": {
                 "type": "git",
@@ -6680,6 +6753,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/4b2d546b336876bd9562f24641b08a25335b06b6",
                 "reference": "4b2d546b336876bd9562f24641b08a25335b06b6",
+=======
+            "version": "10.5.53",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sebastianbergmann/phpunit.git",
+                "reference": "32768472ebfb6969e6c7399f1c7b09009723f653"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/32768472ebfb6969e6c7399f1c7b09009723f653",
+                "reference": "32768472ebfb6969e6c7399f1c7b09009723f653",
+>>>>>>> origin/update-delete
                 "shasum": ""
             },
             "require": {
@@ -6700,7 +6785,11 @@
                 "phpunit/php-timer": "^6.0.0",
                 "sebastian/cli-parser": "^2.0.1",
                 "sebastian/code-unit": "^2.0.0",
+<<<<<<< HEAD
                 "sebastian/comparator": "^5.0.4",
+=======
+                "sebastian/comparator": "^5.0.3",
+>>>>>>> origin/update-delete
                 "sebastian/diff": "^5.1.1",
                 "sebastian/environment": "^6.1.0",
                 "sebastian/exporter": "^5.1.2",
@@ -6751,7 +6840,11 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
                 "security": "https://github.com/sebastianbergmann/phpunit/security/policy",
+<<<<<<< HEAD
                 "source": "https://github.com/sebastianbergmann/phpunit/tree/10.5.55"
+=======
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/10.5.53"
+>>>>>>> origin/update-delete
             },
             "funding": [
                 {
@@ -6775,7 +6868,11 @@
                     "type": "tidelift"
                 }
             ],
+<<<<<<< HEAD
             "time": "2025-09-14T06:19:20+00:00"
+=======
+            "time": "2025-08-20T14:40:06+00:00"
+>>>>>>> origin/update-delete
         },
         {
             "name": "sebastian/cli-parser",
@@ -6947,6 +7044,7 @@
         },
         {
             "name": "sebastian/comparator",
+<<<<<<< HEAD
             "version": "5.0.4",
             "source": {
                 "type": "git",
@@ -6957,6 +7055,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/sebastianbergmann/comparator/zipball/e8e53097718d2b53cfb2aa859b06a41abf58c62e",
                 "reference": "e8e53097718d2b53cfb2aa859b06a41abf58c62e",
+=======
+            "version": "5.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sebastianbergmann/comparator.git",
+                "reference": "a18251eb0b7a2dcd2f7aa3d6078b18545ef0558e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sebastianbergmann/comparator/zipball/a18251eb0b7a2dcd2f7aa3d6078b18545ef0558e",
+                "reference": "a18251eb0b7a2dcd2f7aa3d6078b18545ef0558e",
+>>>>>>> origin/update-delete
                 "shasum": ""
             },
             "require": {
@@ -7012,12 +7122,17 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/comparator/issues",
                 "security": "https://github.com/sebastianbergmann/comparator/security/policy",
+<<<<<<< HEAD
                 "source": "https://github.com/sebastianbergmann/comparator/tree/5.0.4"
+=======
+                "source": "https://github.com/sebastianbergmann/comparator/tree/5.0.3"
+>>>>>>> origin/update-delete
             },
             "funding": [
                 {
                     "url": "https://github.com/sebastianbergmann",
                     "type": "github"
+<<<<<<< HEAD
                 },
                 {
                     "url": "https://liberapay.com/sebastianbergmann",
@@ -7033,6 +7148,11 @@
                 }
             ],
             "time": "2025-09-07T05:25:07+00:00"
+=======
+                }
+            ],
+            "time": "2024-10-18T14:56:07+00:00"
+>>>>>>> origin/update-delete
         },
         {
             "name": "sebastian/complexity",
