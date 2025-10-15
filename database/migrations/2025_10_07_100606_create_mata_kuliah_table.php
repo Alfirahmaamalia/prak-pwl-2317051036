@@ -12,9 +12,9 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('mata_kuliah', function (Blueprint $table) {
-            $table->uuid()->primary();
-            $table->string('nama',100);
-            $table->string('sks');
+            $table->uuid('uuid')->primary();
+            $table->string('nama_kuliah',100);
+            $table->integer('sks');
             $table->timestamps();
         });
     }

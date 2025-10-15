@@ -16,8 +16,8 @@
 
         <!-- Input NPM -->
         <div>
-            <label for="npm" class="block text-sm font-medium text-gray-700">NPM</label>
-            <input type="text" id="npm" name="npm" 
+            <label for="nim" class="block text-sm font-medium text-gray-700">NPM</label>
+            <input type="text" id="nim" name="nim" 
                    class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50">
         </div>
 

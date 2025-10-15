@@ -7,6 +7,7 @@ use App\Models\MataKuliah;
 
 class MataKuliahController extends Controller
 {
+    // 📋 Menampilkan semua data
     public function index()
     {
         $data = [
@@ -16,20 +17,69 @@ class MataKuliahController extends Controller
         return view('list_mk', $data);
     }
 
+    // ➕ Form tambah data
     public function create()
     {
         return view('create_mk', [
-            'title' => 'Create Mata Kuliah'
+            'title' => 'Tambah Mata Kuliah'
         ]);
     }
 
+    // 💾 Simpan data baru
     public function store(Request $request)
     {
-        MataKuliah::create([
-            'mata_kuliah' => $request->input('mata_kuliah'),
-            'sks'         => $request->input('sks'),
+        $request->validate([
+            'nama_kuliah' => 'required|string|max:100',
+            'sks'         => 'required|integer|min:1|max:6',
         ]);
 
-        return redirect()->to('/matakuliah');
+        MataKuliah::create([
+            'nama_kuliah' => $request->nama_kuliah,
+            'sks'         => $request->sks,
+        ]);
+
+        return redirect()
+            ->route('matakuliah.index')
+            ->with('success', 'Data berhasil ditambahkan.');
+    }
+
+    // ✏️ Form edit data
+    public function edit($id)
+    {
+        $mk = MataKuliah::findOrFail($id);
+        return view('edit_mk', [
+            'title' => 'Edit Mata Kuliah',
+            'mk'    => $mk,
+        ]);
+    }
+
+    // 🔄 Update data
+    public function update(Request $request, $id)
+    {
+        $request->validate([
+            'nama_kuliah' => 'required|string|max:100',
+            'sks'         => 'required|integer|min:1|max:6',
+        ]);
+
+        $mk = MataKuliah::findOrFail($id);
+        $mk->update([
+            'nama_kuliah' => $request->nama_kuliah,
+            'sks'         => $request->sks,
+        ]);
+
+        return redirect()
+            ->route('matakuliah.index')
+            ->with('success', 'Data berhasil diperbarui.');
+    }
+
+    // ❌ Hapus data
+    public function destroy($id)
+    {
+        $mk = MataKuliah::findOrFail($id);
+        $mk->delete();
+
+        return redirect()
+            ->route('matakuliah.index')
+            ->with('success', 'Data berhasil dihapus.');
     }
 }

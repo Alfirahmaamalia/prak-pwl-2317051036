@@ -9,14 +9,22 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/profile/{nama}/{npm}/{kelas}',[ProfileController::class,'profile']);
+// 📘 Profile Route
+Route::get('/profile/{nama}/{npm}/{kelas}', [ProfileController::class, 'profile']);
 
+// 👤 User Routes
 Route::get('/user', [UserController::class, 'index']);
-Route::get('/user/create', [UserController::class, 'create']) -> name(name: 'user.create');
-Route::post('/user', [UserController::class, 'store'])->name(name : 'user.store');
+Route::get('/user/create', [UserController::class, 'create'])->name('user.create');
+Route::post('/user', [UserController::class, 'store'])->name('user.store');
 Route::delete('/user/{id}', [UserController::class, 'destroy'])->name('user.destroy');
+
+// Jika ingin full CRUD otomatis:
 Route::resource('user', UserController::class);
 
-Route::get('/matakuliah', [MataKuliahController::class,'index']);
-Route::get('/matakuliah/create', [MataKuliahController::class,'create'])->name('matakuliah.create');
-Route::post('/matakuliah', [MataKuliahController::class,'store'])->name('matakuliah.store');
+// 📚 Mata Kuliah Routes
+Route::get('/matakuliah', [MataKuliahController::class, 'index'])->name('matakuliah.index');
+Route::get('/matakuliah/create', [MataKuliahController::class, 'create'])->name('matakuliah.create');
+Route::post('/matakuliah', [MataKuliahController::class, 'store'])->name('matakuliah.store');
+Route::get('/matakuliah/{id}/edit', [MataKuliahController::class, 'edit'])->name('matakuliah.edit');
+Route::put('/matakuliah/{id}', [MataKuliahController::class, 'update'])->name('matakuliah.update');
+Route::delete('/matakuliah/{id}', [MataKuliahController::class, 'destroy'])->name('matakuliah.destroy');
