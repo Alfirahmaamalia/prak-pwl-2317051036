@@ -33,7 +33,7 @@
                     <tr class="{{ $loop->even ? 'bg-gray-50' : 'bg-white' }} hover:bg-amber-50 transition">
                         <td class="px-6 py-4">{{ $index + 1 }}</td>
                         <td class="px-6 py-4 font-medium text-gray-800">{{ $user->nama }}</td>
-                        <td class="px-6 py-4">{{ $user->npm }}</td>
+                        <td class="px-6 py-4">{{ $user->nim }}</td>
                         <td class="px-6 py-4">{{ $user->kelas->nama_kelas ?? '-' }}</td>
                         <td class="px-6 py-4 text-center">
                             <form action="{{ route('user.destroy', $user->id) }}" method="POST" 

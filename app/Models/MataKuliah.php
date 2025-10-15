@@ -11,29 +11,20 @@ class MataKuliah extends Model
     use HasFactory;
 
     protected $table = 'mata_kuliah';
-    protected $guarded = ['id'];
-
+    protected $primaryKey = 'uuid';
     public $incrementing = false;
     protected $keyType = 'string';
 
-    protected $fillable = ['mata_kuliah', 'sks'];
+    protected $fillable = ['uuid', 'nama_kuliah', 'sks'];
 
     protected static function boot()
     {
         parent::boot();
 
         static::creating(function ($model) {
-            if (empty($model->{$model->getKeyName()})) {
-                $model->{$model->getKeyName()} = (string) Str::uuid();
+            if (empty($model->uuid)) {
+                $model->uuid = (string) Str::uuid();
             }
         });
-    }
-
-    /**
-     * Ambil semua data mata kuliah
-     */
-    public function getAllMK()
-    {
-        return self::all();
     }
 }
