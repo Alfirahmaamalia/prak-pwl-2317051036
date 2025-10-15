@@ -2,26 +2,12 @@
 
 namespace App\Models;
 
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/update-delete
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class UserModel extends Model
 {
     use HasFactory;
-<<<<<<< HEAD
-
-    protected $table = 'user';
-    protected $guarded = ['id'];
-
-    public function kelas(){
-        return $this->belongsTo(Kelas::class,'kelas_id');
-    }
-}
-=======
     protected $table = 'user';
     protected $guarded = ['id'];
 
@@ -42,4 +28,3 @@ class UserModel extends Model
                     ->get();
     }
 }
->>>>>>> origin/update-delete
