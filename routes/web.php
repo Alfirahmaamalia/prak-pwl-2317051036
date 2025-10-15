@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\MataKuliahController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +21,7 @@ Route::get('/', function () {
 }
 );
 
+
 Route::get('/profile/{nama}/{npm}/{kelas}/{foto?}', [ProfileController::class, 'profile']);
 
 Route::get('/user', [UserController::class, 'index']);
@@ -28,3 +30,6 @@ Route::post('/user', [UserController::class, 'store'])->name(name : 'user.store'
 Route::delete('/user/{id}', [UserController::class, 'destroy'])->name('user.destroy');
 Route::resource('user', UserController::class);
 
+Route::get('/matakuliah', [MataKuliahController::class,'index']);
+Route::get('/matakuliah/create', [MataKuliahController::class,'create'])->name('matakuliah.create');
+Route::post('/matakuliah', [MataKuliahController::class,'store'])->name('matakuliah.store');
